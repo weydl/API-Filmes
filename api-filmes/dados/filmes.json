@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "titulo": "Interestelar",
+    "diretor": "Christopher Nolan",
+    "anoLancamento": 2014,
+    "classificacao": "12",
+    "nota": 9.0
+  },
+  {
+    "id": 2,
+    "titulo": "O Auto da Compadecida",
+    "diretor": "Guel Arraes",
+    "anoLancamento": 2000,
+    "classificacao": "12",
+    "nota": 9.2
+  },
+  {
+    "id": 3,
+    "titulo": "Vingadores: Ultimato",
+    "diretor": "Russo Brothers",
+    "anoLancamento": 2019,
+    "classificacao": "12",
+    "nota": 8.5
+  },
+  {
+    "id": 4,
+    "titulo": "Divertida Mente",
+    "diretor": "Pete Docter",
+    "anoLancamento": 2015,
+    "classificacao": "Livre",
+    "nota": 8.8
+  }
+]
