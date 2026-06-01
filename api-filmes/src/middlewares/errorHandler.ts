@@ -1,17 +1,33 @@
-// ============================================================
-// 🎯 TAREFA: Crie o middleware de erro aqui!
-// ============================================================
-//
-// 1. Importar AppError e ValidationError de "../errors"
-// 2. Criar função errorHandler com 4 parâmetros (err, req, res, next)
-// 3. Se err instanceof ValidationError → 400 + erros[]
-// 4. Se err instanceof AppError → err.statusCode + mensagem
-// 5. Senão → console.error + 500
-// 6. Exportar a função
-//
-// ============================================================
-
 import { Request, Response, NextFunction } from "express";
+import { AppError, ValidationError } from "../errors";
 
-// Escreva seu código aqui:
+export function errorHandler(
+  err: Error,
+  req: Request,
+  res: Response,
+  next: NextFunction
+): void {
+  if (err instanceof ValidationError) {
+    res.status(400).json({
+      sucesso: false,
+      erro: err.message,
+      erros: err.erros,
+    });
+    return;
+  }
 
+  if (err instanceof AppError) {
+    res.status(err.statusCode).json({
+      sucesso: false,
+      erro: err.message,
+    });
+    return;
+  }
+
+  console.error(err);
+
+  res.status(500).json({
+    sucesso: false,
+    erro: "Erro interno do servidor",
+  });
+}
