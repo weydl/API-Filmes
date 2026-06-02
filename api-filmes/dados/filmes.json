@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "titulo": "Interestelar",
-    "diretor": "Christopher Nolan",
-    "anoLancamento": 2014,
-    "classificacao": "12",
-    "nota": 9.0
+    "titulo": "A Casa Torta",
+    "diretor": "Gilles Paquet-Brenner",
+    "anoLancamento": 2017,
+    "classificacao": "14",
+    "nota": 9.5
   },
   {
     "id": 2,
@@ -24,11 +24,11 @@
     "nota": 8.5
   },
   {
-    "id": 4,
-    "titulo": "Divertida Mente",
-    "diretor": "Pete Docter",
-    "anoLancamento": 2015,
-    "classificacao": "Livre",
-    "nota": 8.8
+    "id": 5,
+    "titulo": "A Casa Torta",
+    "diretor": "Gilles Paquet-Brenner",
+    "anoLancamento": 2017,
+    "classificacao": "14",
+    "nota": 6.4
   }
 ]
