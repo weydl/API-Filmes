@@ -1,7 +1,7 @@
 import express from "express";
 import { logger } from "./middlewares/logger";
 import { filmeRoutes } from "./routes/filmeRoutes";
-// 🎯 TODO: importar errorHandler de "./middlewares/errorHandler"
+import { errorHandler } from "./middlewares/errorHandler";
 
 const app = express();
 
@@ -12,7 +12,8 @@ app.use(logger);
 
 app.use(filmeRoutes);
 
-// 🎯 TODO: app.use(errorHandler) — DEPOIS das rotas!
+// Middleware de tratamento de erros SEMPRE depois das rotas
+app.use(errorHandler);
 
 app.listen(3000, () => {
   console.log("✅ API Filmes rodando em http://localhost:3000");
